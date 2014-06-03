@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>SyCCON Arduino Monitoring</title>
+		
+		<script LANGUAGE="javascript">
+		
+			function fn_Sen1Green()
+			{
+				imgSensor1.src = "/image/verde.jpg";
+			}
+			
+
+			function fn_Sen2Green()
+			{
+				imgSensor2.src = "/image/verde.jpg";
+			}
+
+			function fn_Sen1Red()
+			{
+				imgSensor1.src = "/image/rojo.JPG";
+			}
+			
+			function fn_Sen2Red()
+			{
+				imgSensor2.src = "/image/rojo.JPG";
+			}
+			
+			function fn_Command1()
+			{
+				txtMsg.value = txtMsg.value + "Turn ON Alarm 1" + "\n";
+			}
+
+				function fn_Command2()
+			{
+				txtMsg.value = txtMsg.value + "Turn ON Alarm 2" + "\n";
+			}
+
+		</script>
+
+    </head>
+    <body>
+
+
+	<!--
+            <div id="container">
+                <h1>This is customers page</h1>
+            </div>
+
+
+	<a href="addCustomer.php">Altas</a>
+	<a href="delCustomer.php">Bajas</a>
+	<a href="updateCustomer.php">Actualizar</a>
+	<a href="browseCustomer.php">Consultas</a>
+	
+			-->
+			
+		<FIELDSET style="position:absolute;top:20px;width:250px;height:100px;font-family:Arial;font-size:10pt">
+			<LEGEND>Monitor</LEGEND>
+			<input type="image" name="imgSensor1" id="imgSensor1" style="position:absolute;top:20px;width:10px;height:10px;visibility:visible" src="/image/rojo.JPG" onmouseover="fn_Sen1Green();" onmouseout="fn_Sen1Red();">
+			<label style="position:absolute;top:15px;left:30px;font-family:Arial;font-size:10pt">Vibration Sensor</label>
+			<input type="image" name="imgSensor2" id="imgSensor2" style="position:absolute;top:40px;width:10px;height:10px;visibility:visible" src="/image/rojo.JPG" onmouseover="fn_Sen2Green();" onmouseout="fn_Sen2Red();">
+			<label style="position:absolute;top:35px;left:30px;font-family:Arial;font-size:10pt">Gas Sensor</label>
+		</FIELDSET>
+			
+		<FIELDSET style="position:absolute;top:20px;left:300px;width:250px;height:100px;font-family:Arial;font-size:10pt">
+			<LEGEND>Control</LEGEND>
+			<INPUT TYPE="Button" NAME="inpButton1" id="inpButton1" value="Button 1" style="position:absolute;top:20px;left:20px;font-family:Arial;font-size:10pt" onClick="fn_Command1();">
+			<INPUT TYPE="Button" NAME="inpButton2" id="inpButton2" value="Button 2" style="position:absolute;top:20px;left:100px;font-family:Arial;font-size:10pt" onClick="fn_Command2();">
+		</FIELDSET>
+
+		<FIELDSET style="position:absolute;top:150px;width:250px;height:100px;font-family:Arial;font-size:10pt">
+			<LEGEND>FeedBack</LEGEND>
+			<input type="image" name="imgLED1" id="imgLED1" style="position:absolute;top:20px;width:10px;height:10px;visibility:visible" src="/image/rojo.JPG">
+			<label style="position:absolute;top:15px;left:30px;font-family:Arial;font-size:10pt">LED Sensor 1</label>
+			<input type="image" name="imgLED2" id="imgLED2" style="position:absolute;top:40px;width:10px;height:10px;visibility:visible" src="/image/rojo.JPG">
+			<label style="position:absolute;top:35px;left:30px;font-family:Arial;font-size:10pt">LED Sensor 2</label>
+		</FIELDSET>
+
+		<TEXTAREA name="txtMsg" id="txtMsg" STYLE="position:absolute;top:150px;left:300px;width:250px;height:100px;font-family:Arial;font-size:10pt" align="left" rows="3"></TEXTAREA>
+
+    </body>
+
+	
+
+</html>
